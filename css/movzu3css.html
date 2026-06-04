@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webbookaz/html</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            margin:0;
+            overflow: hidden;
+        }
+        header{
+            background-color:rgb(92, 92, 227);
+            height:80px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            align-items: flex-start;
+            height: calc(100vh - 80px);
+        }
+        #basliqsetri{
+            font-size:50px;
+            margin:0;
+            color:white;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif; 
+        }
+        #navlist{
+            list-style-type: none;
+            display:flex;
+            margin:0;
+            padding:0;     
+        }
+        .navelement{
+            font-size:18px;
+            padding:10px;
+            background-color: #D1D5DB;
+            border:2px solid rgb(92, 92, 227);
+            width:108px;
+            font-weight: bold;
+        }
+        .navelement.aktiv {
+            background-color: rgb(92, 92, 227); 
+        }
+        .navelement.aktiv a {
+            color: white; 
+        }
+        li a {
+            text-decoration:none;
+            color:black;
+        }
+        #cssart1{
+            background-color: #D1D5DB;
+            width:324px;
+            min-height: 100vh;
+            margin-top:0;
+            border:2px solid rgb(92, 92, 227);
+            overflow-y: auto;
+        }
+        #csslist{
+            list-style-type: none ;
+            padding-left:10px;
+        }
+        .csselement{
+            font-size:18px;
+            margin-bottom:5px;
+            padding-top:3px;
+            padding-bottom:3px;
+            cursor:pointer;
+            
+        }
+        .csselement:hover{
+            background-color:#a6a6a6;  
+        }
+        .csselement.active{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+        #cssart2{
+            overflow-y: auto;
+        }
+        #saghisse {
+        flex: 1;
+        height: 100%; 
+        overflow-y: auto; 
+        padding: 20px 30px;
+        }
+        aside{
+            width:300px;
+        }
+        table{
+            border-collapse: collapse;
+            border:2px solid black;
+        }
+        table th{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+        .asidetext{
+            margin-top:10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <p id="basliqsetri">Webbook</p>
+    </header>
+    <nav>
+            <ul id="navlist">
+                <li class="navelement"><a href="/Html dersleri/webbokaz/esas.html">Əsas səhifə</a></li>
+                <li class="navelement"><a href="/Html dersleri/webbokaz/html/inter.html">HTML</a></li>
+                <li class="navelement aktiv"><a href="/Html dersleri/webbokaz/css/intercss.html">CSS</a></li>
+            </ul>
+        </nav>
+    <main>
+        
+        
+        <article id="cssart1">
+                <nav id="cssnav">
+                    <ul id="csslist">
+                        <li class="csselement"><a href="/Html dersleri/webbokaz/css/intercss.html">CSS Giriş</a></li>
+                        <li class="csselement"><a href="movzu2css.html">HTML və CSS əlaqəsi.Selectorlar</a></li>
+                        <li class="csselement active"><a href="movzu3css.html">CSS ilə mətnlərə üslub təyini</a></li>
+                    </ul>
+                </nav>
+        </article>
+        
+        
+        <div id="saghisse">
+            <article id="cssart2">
+               <h1>CSS ilə Mətnlərə Üslub Təyini</h1>
+
+                <p>
+                Veb səhifədəki məzmunun böyük hissəsini mətnlər təşkil edir. Bu mətnlərin oxunaqlı, estetik və nizamlı görünməsi istifadəçi təcrübəsi üçün çox vacibdir. CSS-də mətnlərin rəngini, ölçüsünü, düzləndirilməsini və şrift (font) ailəsini idarə etmək üçün xüsusi xüsusiyyətlər (properties) mövcuddur.
+                </p>
+
+                <hr>
+
+                <h2>Əsas Mətn Xüsusiyyətləri</h2>
+
+                <h3>1. Mətnin Rəngi (<code>color</code>)</h3>
+                <p>
+                Mətnin rəngini təyin etmək üçün <code>color</code> xüsusiyyətindən istifadə olunur. Rənglər adla (blue), HEX kodu ilə (#5c5ce3) və ya RGB formatı ilə (rgb(92, 92, 227)) verilə bilər.
+                </p>
+                <pre>
+                    p {
+                    color: #333333;
+                    }
+                </pre>
+
+                <h3>2. Mətnin Düzləndirilməsi (<code>text-align</code>)</h3>
+                <p>
+                Mətni üfüqi istiqamətdə düzləndirmək üçün istifadə olunur. Alacağı əsas dəyərlər:
+                </p>
+                <ul>
+                    <li><code>left</code>: Mətni sola çəkir (standart hal).</li>
+                    <li><code>right</code>: Mətni sağa çəkir.</li>
+                    <li><code>center</code>: Mətni mərkəzə mərkəzləşdirir (başlıqlar üçün çox istifadə olunur).</li>
+                    <li><code>justify</code>: Mətni hər iki tərəfə bərabər yayır (kitab və qəzet səhifələrindəki kimi).</li>
+                </ul>
+                <pre>
+                h1 {
+                text-align: center;
+                }
+                </pre>
+
+                <h3>3. Mətnin Dekorasiyası (<code>text-decoration</code>)</h3>
+                <p>
+                Mətnə alt xətt, üst xətt əlavə etmək və ya mövcud xətləri silmək üçün işlədilir. Ən çox linklərin (<code>&lt;a&gt;</code> teqinin) altındakı xətti silmək üçün <code>none</code> dəyəri ilə istifadə olunur:
+                </p>
+                <ul>
+                    <li><code>underline</code>: Altından xətt çəkir.</li>
+                    <li><code>line-through</code>: Üzərindən xətt çəkir.</li>
+                    <li><code>none</code>: Bütün xətləri silir.</li>
+                </ul>
+                <pre>
+                a {
+                text-decoration: none;
+                }
+                </pre>
+
+                <h3>4. Böyük-Kiçik Hərf Transformasiyası (<code>text-transform</code>)</h3>
+                <p>
+                Mətndəki hərflərin HTML koduna toxunmadan böyük və ya kiçik hərflərlə yazılmasını tənzimləyir:
+                </p>
+                <ul>
+                    <li><code>uppercase</code>: Bütün mətn bütövlüklə böyük hərflərlə yazılır.</li>
+                    <li><code>lowercase</code>: Bütün mətn kiçik hərflərlə yazılır.</li>
+                    <li><code>capitalize</code>: Hər sözün yalnız ilk hərfi böyük açılır.</li>
+                </ul>
+
+                <hr>
+
+                <h2>Şrift (Font) Xüsusiyyətləri</h2>
+                <p>Mətnin formasına və ölçüsünə birbaşa təsir edən font tənzimləmələri aşağıdakılardır:</p>
+
+                <h3>1. Font Ailəsi (<code>font-family</code>)</h3>
+                <p>
+                Mətnin hansı yazı üslubunda (şriftdə) görünəcəyini təyin edir. Ekranda problem çıxmaması üçün adətən bir neçə şrift adı ardıcıl yazılır (əgər birincisi kompüterdə yoxdursa, brauzer ikincini işlədir):
+                </p>
+                <pre>
+                p {
+                font-family: Arial, Helvetica, sans-serif;
+                }
+                </pre>
+
+                <h3>2. Font Ölçüsü (<code>font-size</code>)</h3>
+                <p>
+                Mətnin böyüklüyünü təyin edir. Ən çox istifadə olunan ölçü vahidi <strong>px</strong> (piksel) və <strong>rem</strong> formatlarıdır.
+                </p>
+                <pre>
+                .metn-boyuk {
+                font-size: 20px;
+                }
+                </pre>
+
+                <h3>3. Font Qalınlığı (<code>font-weight</code>)</h3>
+                <p>
+                Mətnin incə və ya qalın olmasını təyin edir. <code>normal</code>, <code>bold</code> dəyərlərini və ya 100-900 arası rəqəmsal dəyərləri ala bilər (məsələn, 400 normal, 700 bold deməkdir).
+                </p>
+
+                <hr>
+
+                <h2>Mətn Üslubları Xülasə Cədvəli</h2>
+
+                <table>
+                    <tr>
+                        <th>CSS Xüsusiyyəti</th>
+                        <th>Tez-tez İstifadə Olunan Dəyərlər</th>
+                        <th>Təyinatı</th>
+                    </tr>
+                    <tr>
+                        <td><code>color</code></td>
+                        <td>red, #ffffff, rgb(0,0,0)</td>
+                        <td>Mətnin rəngini təyin edir.</td>
+                    </tr>
+                    <tr>
+                        <td><code>text-align</code></td>
+                        <td>left, right, center, justify</td>
+                        <td>Mətni üfüqi istiqamətdə düzləndirir.</td>
+                    </tr>
+                    <tr>
+                        <td><code>text-decoration</code></td>
+                        <td>none, underline, line-through</td>
+                        <td>Mətnə xətt effektləri verir və ya silir.</td>
+                    </tr>
+                    <tr>
+                        <td><code>text-transform</code></td>
+                        <td>uppercase, lowercase, capitalize</td>
+                        <td>Hərflərin böyük/kiçikliyini dəyişir.</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-family</code></td>
+                        <td>Arial, Tahoma, sans-serif</td>
+                        <td>Mətnin yazı stilini (şriftini) seçir.</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-size</code></td>
+                        <td>14px, 1.2rem, 18px</td>
+                        <td>Şriftin ekrandakı ölçüsünü təyin edir.</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-weight</code></td>
+                        <td>normal, bold, 400, 700</td>
+                        <td>Mətnin qalınlıq dərəcəsini nizamlayır.</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>Praktik Kod Nümunəsi</h2>
+                <p>Aşağıdakı nümunədə mətn teqlərinin CSS vasitəsilə necə fərqli şəkillərə salındığını görə bilərsiniz:</p>
+
+                <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="az"&gt;
+                &lt;head&gt;
+                    &lt;style&gt;
+                        h1 {
+                            font-family: 'Times New Roman', serif;
+                            font-size: 36px;
+                            color: rgb(92, 92, 227);
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                        
+                        .anons-metn {
+                            font-family: Arial, sans-serif;
+                            font-size: 16px;
+                            line-height: 1.5; /* Sətirlərarası boşluq */
+                            text-align: justify;
+                        }
+
+                        .silinmis-qiymet {
+                            color: gray;
+                            text-decoration: line-through;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+
+                    &lt;h1&gt;Kompüter elmləri&lt;/h1&gt;
+                    &lt;p class="anons-metn"&gt;Mətn üslubları saytın oxunma keyfiyyətini artırır.&lt;/p&gt;
+                    &lt;p&gt;Köhnə qiymət: &lt;span class="silinmis-qiymet"&gt;100 AZN&lt;/span&gt;&lt;/p&gt;
+
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </pre>
+
+                <hr>
+
+                <h2>Nəticə</h2>
+                <p>
+                Mətnlərin düzgün formatlanması veb layihələrin vizual zənginliyini tamamlayır. CSS-də <code>font</code> və <code>text</code> xüsusiyyətlərini kombinasiya edərək istənilən yazı tipini oxuyucu üçün cəlbedici formaya gətirmək mümkündür. Növbəti dərslərimizdə veb elementlərinin blok quruluşunu (Box Model) və kənar boşluqları öyrənəcəyik.
+                </p>      
+            </article>
+        </div>  
+        <aside>
+            <h3 id="asidebasliq">CSS Faydalı Linklər</h3><br>
+            <p class="asidetext">>><b>W3Schools CSS</b> — CSS-i sıfırdan öyrənmək və veb səhifələrinizə peşəkar dizayn vermək üçün W3Schools-un dərslərindən və praktiki nümunələrindən istifadə edə bilərsiniz.</p>
+            <a href="https://www.w3schools.com/css/default.asp">W3 School</a><br>
+            <p class="asidetext">>><b>Codecademy CSS</b> — CSS-i interaktiv dərslər və praktik tapşırıqlarla öyrənərək veb səhifələrinizin dizayn bacarıqlarını inkişaf etdirə bilərsiniz.</p>
+            <a href="https://www.codecademy.com/learn/learn-css">htmlbook.ru</a><br>
+            <p class="asidetext">>><b>Mozilla MDN CSS</b> — CSS texnologiyasını rəsmi sənədlər, ətraflı izahlar və nümunələrlə öyrənmək üçün MDN platformasından yararlana bilərsiniz.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla</a><br>
+            <p class="asidetext">>><b>web.dev CSS</b> — CSS üzrə müasir metodları, performans optimallaşdırmasını və peşəkar veb dizayn texnikalarını öyrənmək üçün web.dev platformasından istifadə edə bilərsiniz.</p>
+            <a href="https://web.dev/learn/css">Web.dev</a>
+            
+        </aside>       
+    </main>
+</body>
+</html>

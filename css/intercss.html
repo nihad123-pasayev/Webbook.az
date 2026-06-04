@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webbookaz/html</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            margin:0;
+            overflow: hidden;
+        }
+        header{
+            background-color:rgb(92, 92, 227);
+            height:80px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            align-items: flex-start;
+            height: calc(100vh - 80px);
+        }
+        #basliqsetri{
+            font-size:50px;
+            margin:0;
+            color:white;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navlist{
+            list-style-type: none;
+            display:flex;
+            margin:0;
+            padding:0;     
+        }
+        .navelement{
+            font-size:18px;
+            padding:10px;
+            background-color: #D1D5DB;
+            border:2px solid rgb(92, 92, 227);
+            width:108px;
+            font-weight: bold;
+        }
+        .navelement.aktiv {
+            background-color: rgb(92, 92, 227); 
+        }
+        .navelement.aktiv a {
+            color: white; 
+        }
+        li a {
+            text-decoration:none;
+            color:black;
+        }
+        #cssart1{
+            background-color: #D1D5DB;
+            width:324px;
+            min-height: 100vh;
+            margin-top:0;
+            border:2px solid rgb(92, 92, 227);
+            overflow-y: auto;
+        }
+        #csslist{
+            list-style-type: none ;
+            padding-left:10px;
+        }
+        .csselement{
+            font-size:18px;
+            margin-bottom:5px;
+            padding-top:3px;
+            padding-bottom:3px;
+            cursor:pointer;
+            
+        }
+        .csselement:hover{
+            background-color:#a6a6a6;  
+        }
+        .csselement.active{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+        #cssart2{
+            overflow-y: auto;
+        }
+        #saghisse {
+        flex: 1;
+        height: 100%; 
+        overflow-y: auto; 
+        padding: 20px 30px;
+        }
+        aside{
+            width:300px;
+        }
+        table{
+            border-collapse: collapse;
+            border:2px solid black
+        }
+        table th{
+            background-color: rgb(92, 92, 227);
+            color:white
+        }
+        .asidetext{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p id="basliqsetri">Webbook</p>
+    </header>
+    <nav>
+            <ul id="navlist">
+                <li class="navelement"><a href="/Html dersleri/webbokaz/esas.html">Əsas səhifə</a></li>
+                <li class="navelement"><a href="/Html dersleri/webbokaz/html/inter.html">HTML</a></li>
+                <li class="navelement aktiv"><a href="/Html dersleri/webbokaz/css/intercss.html">CSS</a></li>
+            </ul>
+        </nav>
+    <main>
+        
+        
+        <article id="cssart1">
+                <nav id="cssnav">
+                    <ul id="csslist">
+                        <li class="csselement active"><a href="/Html dersleri/webbokaz/css/intercss.html">CSS Giriş</a></li>
+                        <li class="csselement"><a href="movzu2css.html">HTML və CSS əlaqəsi.Selectorlar</a></li>
+                        <li class="csselement"><a href="movzu3css.html">CSS ilə mətnlərə üslub təyini</a></li>
+                    </ul>
+                </nav>
+        </article>
+        
+        
+        <div id="saghisse">
+            <article id="cssart2">
+               <h1>CSS Giriş</h1>
+               <p>
+                HTML veb səhifənin skeletini və strukturunu yaradır, lakin ona vizual gözəllik, rəng, nizamlı düzülüş və dizayn vermək üçün bizə mütləq <strong>CSS</strong> lazımdır. CSS öyrənməklə siz veb səhifələrinizi tamamilə dəyişdirə və onları modern üsluba sala bilərsiniz.
+                </p>
+
+                <hr>
+
+                <h2>CSS Nədir?</h2>
+                <p>
+                CSS (<strong>Cascading Style Sheets</strong>) — veb səhifələrin görünüşünü tənzimləmək üçün istifadə olunan bir üslub (stil) dilidir. O, HTML elementlərinin ekranda, kağızda və ya digər media vasitələrində necə göstərilməli olduğunu təyin edir.
+                </p>
+                <p>CSS-in əsas vəzifələri:</p>
+                <ul>
+                    <li>Mətnlərin rəngini, şriftini (font) və ölçüsünü dəyişmək.</li>
+                    <li>Elementlərin səhifədəki yerini (Layout) müəyyən etmək (böyüklük, kənar boşluqlar və s.).</li>
+                    <li>Saytların mobil telefonlara, planşetlərə və kompüter ekranlarına uyğunlaşmasını (Responsive dizayn) təmin etmək.</li>
+                    <li>Eyni dizaynı bir neçə HTML səhifəsinə eyni anda tətbiq etməklə vaxta qənaət etmək.</li>
+                </ul>
+
+                <hr>
+
+                <h2>CSS Sintaksisi (Yazılış Qaydası)</h2>
+                <p>
+                CSS kodu çox sadə bir qayda üzərində qurulur. O, bir <strong>Selektor (Selector)</strong> və bir <strong>Bəyannamə bloqundan (Declaration block)</strong> ibarətdir:
+                </p>
+
+                <pre>
+                selector {
+                property: value;
+                }
+                </pre>
+
+                <p>Burada hər bir hissənin öz mənası var:</p>
+                <ul>
+                    <li><strong>Selector (Selektor):</strong> Stil vermək istədiyiniz HTML elementini seçir (Məsələn: <code>h1</code>, <code>p</code>, <code>div</code>).</li>
+                    <li><strong>Property (Xüsusiyyət):</strong> Dəyişmək istədiyiniz stil növüdür (Məsələn: <code>color</code>, <code>font-size</code>, <code>background-color</code>).</li>
+                    <li><strong>Value (Dəyər):</strong> Xüsusiyyətə verdiyiniz yeni tənzimləmədir (Məsələn: <code>red</code>, <code>20px</code>, <code>blue</code>).</li>
+                </ul>
+
+                <p>Nümunə:</p>
+                <pre>
+                p {
+                color: red;
+                font-size: 16px;
+                }
+                </pre>
+                <p>
+                Bu kod səhifədəki bütün paraqrafların (<code>&lt;p&gt;</code>) mətn rəngini qırmızı, şrift ölçüsünü isə 16 piksel edəcək.
+                </p>
+
+                <hr>
+
+                <h2>HTML Sənədinə CSS Əlavə Etməyin 3 Üsulu</h2>
+                <p>CSS kodlarını HTML səhifəsinə bərkitmək üçün üç fərqli metod mövcuddur:</p>
+
+                <table>
+                    <tr>
+                        <th>Metodun Adı</th>
+                        <th>Yazılış Yeri</th>
+                        <th>Nümunə Kod</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Inline (Daxili / Sətiriçi)</strong></td>
+                        <td>Birbaşa HTML teqinin içində <code>style</code> atributu ilə yazılır.</td>
+                        <td><code>&lt;h1 style="color:blue;"&gt;Başlıq&lt;/h1&gt;</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Internal (Daxili Sənəd)</strong></td>
+                        <td>HTML sənədinin <code>&lt;head&gt;</code> hissəsində <code>&lt;style&gt;</code> teqləri arasında yazılır.</td>
+                        <td>
+                    <pre style="margin:0; padding:5px; border:none; background:none;">
+                    &lt;style&gt;
+                    body { background-color: text; }
+                    &lt;/style&gt;
+                    </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>External (Xarici Fayl)</strong></td>
+                        <td>Ayrıca bir `.css` faylı yaradılır və HTML-ə <code>&lt;link&gt;</code> teqi ilə qoşulur.</td>
+                        <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+                    </tr>
+                </table>
+
+                <p>
+                > **Qeyd:** Real layihələrdə və böyük saytlarda kodların təmiz və nizamlı olması üçün hər zaman **External (Xarici) CSS** üsulundan istifadə olunması tövsiyə edilir.
+                </p>
+
+                <hr>
+
+                <h2>Tam Bir CSS-HTML Nümunəsi</h2>
+                <p>Aşağıda CSS teqlərinin HTML daxilində (Internal üsulla) istifadəsinə aid sadə bir nümunə verilmişdir:</p>
+
+                <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="az"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;CSS İlk Səhifəm&lt;/title&gt;
+                        &lt;style&gt;
+                            body {
+                                background-color: #f0f0f0;
+                            }
+                            h1 {
+                                color: darkblue;
+                                text-align: center;
+                            }
+                            p {
+                                font-family: Arial;
+                                font-size: 18px;
+                                color: #333;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+
+                        &lt;h1&gt;CSS Dünyasına Xoş Gəlmisiniz!&lt;/h1&gt;
+                        &lt;p&gt;Bu paraqraf CSS vasitəsilə dizayn edilmişdir.&lt;/p&gt;
+
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </pre>
+
+                <hr>
+
+                <h2>Nəticə</h2>
+                <p>
+                CSS veb proqramlaşdırmanın vizual tərəfidir. O olmasaydı, internetdəki bütün saytlar sadə qara mətndən və ağ arxa fondan ibarət olardı. CSS-in təməl qaydalarını və HTML-ə qoşulma üsullarını öyrənməklə siz veb dizaynerlik yolunda ən böyük addımı atmış olursunuz. Növbəti dərslərdə teqləri daha dəqiq seçmək üçün xüsusi selektorları öyrənəcəyik.
+                </p>
+                     
+            </article>
+        </div>  
+        <aside>
+            <h3 id="asidebasliq">CSS Faydalı Linklər</h3><br>
+            <p class="asidetext">>><b>W3Schools CSS</b> — CSS-i sıfırdan öyrənmək və veb səhifələrinizə peşəkar dizayn vermək üçün W3Schools-un dərslərindən və praktiki nümunələrindən istifadə edə bilərsiniz.</p>
+            <a href="https://www.w3schools.com/css/default.asp">W3 School</a><br>
+            <p class="asidetext">>><b>Codecademy CSS</b> — CSS-i interaktiv dərslər və praktik tapşırıqlarla öyrənərək veb səhifələrinizin dizayn bacarıqlarını inkişaf etdirə bilərsiniz.</p>
+            <a href="https://www.codecademy.com/learn/learn-css">htmlbook.ru</a><br>
+            <p class="asidetext">>><b>Mozilla MDN CSS</b> — CSS texnologiyasını rəsmi sənədlər, ətraflı izahlar və nümunələrlə öyrənmək üçün MDN platformasından yararlana bilərsiniz.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla</a><br>
+            <p class="asidetext">>><b>web.dev CSS</b> — CSS üzrə müasir metodları, performans optimallaşdırmasını və peşəkar veb dizayn texnikalarını öyrənmək üçün web.dev platformasından istifadə edə bilərsiniz.</p>
+            <a href="https://web.dev/learn/css">Web.dev</a>
+            
+        </aside>       
+    </main>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webbookaz/html</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            margin:0;
+            overflow: hidden;
+        }
+        header{
+            background-color:rgb(92, 92, 227);
+            height:80px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            height: calc(100vh - 80px);
+        }
+        #basliqsetri{
+            font-size:50px;
+            margin:0;
+            color:white;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navlist{
+            list-style-type: none;
+            display:flex;
+            margin:0;
+            padding:0;     
+        }
+        .navelement{
+            font-size:18px;
+            padding:10px;
+            background-color: #D1D5DB;
+            border:2px solid rgb(92, 92, 227);
+            width:108px;
+            font-weight: bold;
+        }
+        .navelement.aktiv {
+            background-color: rgb(92, 92, 227); 
+        }
+        .navelement.aktiv a {
+            color: white; 
+        }
+        li a {
+            text-decoration:none;
+            color:black;
+        }
+        #htmlart1{
+            background-color: #D1D5DB;
+            width:324px;
+            min-height: 100vh;
+            margin-top:0;
+            border:2px solid rgb(92, 92, 227);
+            overflow-y: auto;
+        }
+        #htmllist{
+            list-style-type: none ;
+            padding-left:10px;
+        }
+        .htmlelement{
+            font-size:18px;
+            margin-bottom:5px;
+            padding-top:3px;
+            padding-bottom:3px;
+            cursor:pointer;
+            
+        }
+        .htmlelement:hover{
+            background-color:#a6a6a6;  
+        }
+        .htmlelement.active{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+        #htmlart2{
+            overflow-y: auto;
+        }
+        #saghisse {
+        flex: 1;
+        height: 100%; 
+        overflow-y: auto; 
+        padding: 20px 30px;
+        }
+        aside{
+            width:300px;
+        }
+        table{
+            border-collapse: collapse;
+            border:2px solid black;
+        }
+        table th{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <p id="basliqsetri">Webbook</p>
+    </header>
+    <nav>
+            <ul id="navlist">
+                <li class="navelement"><a href="/Html dersleri/webbokaz/esas.html">Əsas səhifə</a></li>
+                <li class="navelement aktiv"><a href="/Html dersleri/webbokaz/html/inter.html">HTML</a></li>
+                <li class="navelement"><a href="/Html dersleri/webbokaz/css/intercss.html">CSS</a></li>
+            </ul>
+        </nav>
+    <main>
+
+        <article id="htmlart1">
+                <nav id="htmlnav">
+                    <ul id="htmllist">
+                        <li class="htmlelement active"><a href="/Html dersleri/webbokaz/html/inter.html">HTML Giriş</a></li>
+                        <li class="htmlelement"><a href="movzu2html.html">HTML Sənədinin Struktur Elementləri</a></li>
+                        <li class="htmlelement"><a href="movzu3html.html">HTML Teqləri ilə Mətnin formatlanması</a></li>
+                    </ul>
+                </nav>
+        </article>
+              
+        <div id="saghisse">
+            <article id="htmlart2">
+               <h1>HTML Giriş</h1>
+                <h2>HTML nədir?</h2>
+                <p>
+                HTML (<strong>HyperText Markup Language</strong>) veb səhifələrin yaradılması üçün istifadə olunan əsas işarələmə dilidir. İnternetdə gördüyümüz demək olar ki, bütün veb səhifələr HTML vasitəsilə qurulur.
+                </p>
+
+                <p>
+                HTML proqramlaşdırma dili deyil. O, brauzerə məzmunun necə göstərilməli olduğunu bildirən işarələrdən (taglardan) ibarətdir.
+                </p>
+
+                <p>HTML ilə aşağıdakı elementləri yaratmaq mümkündür:</p>
+
+                <ul>
+                    <li>Başlıqlar</li>
+                    <li>Paraqraflar</li>
+                    <li>Şəkillər</li>
+                    <li>Keçidlər (linklər)</li>
+                    <li>Cədvəllər</li>
+                    <li>Siyahılar</li>
+                    <li>Formalar</li>
+                    <li>Videolar və audiolar</li>
+                </ul>
+                <hr>
+
+                <h2>HTML Necə İşləyir?</h2>
+                <p>
+                HTML sənədi müxtəlif taglardan ibarət olur. Bu taglar brauzerə məzmunun strukturunu bildirir.
+                </p>
+
+                <p>Məsələn:</p>
+
+                <pre>
+                &lt;h1&gt;Salam Dünya&lt;/h1&gt;
+                &lt;p&gt;Bu mənim ilk HTML səhifəmdir.&lt;/p&gt;
+                </pre>
+
+                <p>Burada:</p>
+
+                <ul>
+                    <li><code>&lt;h1&gt;</code> əsas başlıq yaradır.</li>
+                    <li><code>&lt;p&gt;</code> paraqraf yaradır.</li>
+                    <li>Açılış tagı (<code>&lt;h1&gt;</code>) və bağlanış tagı (<code>&lt;/h1&gt;</code>) arasında yazılan mətn ekranda göstərilir.</li>
+                </ul>
+
+                <hr>
+
+                <h2>Sadə HTML Sənədinin Quruluşu</h2>
+
+                <p>Hər HTML səhifəsi müəyyən bir quruluşa malik olur.</p>
+                <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;title&gt;Mənim Saytım&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+
+                    &lt;h1&gt;Salam Dünya&lt;/h1&gt;
+                    &lt;p&gt;Bu ilk HTML səhifəmdir.&lt;/p&gt;
+
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </pre>
+                <p>Bu sənəddə:</p>
+
+                <table border="1">
+                    <tr>
+                        <th>Element</th>
+                        <th>Təyinatı</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;!DOCTYPE html&gt;</td>
+                        <td>Sənədin HTML5 olduğunu bildirir</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;html&gt;</td>
+                        <td>HTML sənədinin başlanğıcıdır</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;head&gt;</td>
+                        <td>Səhifə haqqında məlumatları saxlayır</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;title&gt;</td>
+                        <td>Brauzer tabında görünən başlıqdır</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;body&gt;</td>
+                        <td>İstifadəçinin gördüyü bütün məzmunu saxlayır</td>
+                    </tr>
+                </table>
+
+                <hr>
+                <h2>HTML Tagları</h2>
+
+                <p>HTML tagları adətən bu formada yazılır:</p>
+
+                <pre>
+                &lt;tagname&gt;Məzmun&lt;/tagname&gt;
+                </pre>
+
+                <p>Nümunə:</p>
+                <pre>
+                &lt;p&gt;Bu bir paraqrafdır.&lt;/p&gt;
+                </pre>
+                <p>
+                Əksər tagların açılış və bağlanış hissəsi olur.
+                </p>
+                <p>
+                Lakin bəzi taglar bağlanış tagı olmadan da istifadə edilə bilər.
+                </p>
+
+                <p>Məsələn:</p>
+
+                <pre>
+                &lt;br&gt;
+                &lt;hr&gt;
+                &lt;img&gt;
+                </pre>
+                <hr>
+                <h2>HTML Elementi Nədir?</h2>
+
+                <p>
+                HTML elementi açılış tagı, məzmun və bağlanış tagından ibarət olur.
+                </p>
+
+                <p>Nümunə:</p>
+
+                <pre>
+                &lt;p&gt;Salam Dünya&lt;/p&gt;
+                </pre>
+
+                <p>Bu elementin hissələri:</p>
+
+                <ul>
+                    <li>Açılış tagı → <code>&lt;p&gt;</code></li>
+                    <li>Məzmun → Salam Dünya</li>
+                    <li>Bağlanış tagı → <code>&lt;/p&gt;</code></li>
+                </ul>
+
+                <hr>
+
+                <h2>HTML Atributları</h2>
+
+                <p>
+                Atributlar element haqqında əlavə məlumat verir.
+                </p>
+
+                <p>Nümunə:</p>
+                <pre>
+                &lt;a href="https://example.com"&gt;Sayta keç&lt;/a&gt;
+                </pre>
+
+                <p>Burada:</p>
+                <ul>
+                    <li><code>href</code> atributdur.</li>
+                    <li>Atributun dəyəri <code>"https://example.com"</code> hissəsidir.</li>
+                </ul>
+
+                <p>Başqa nümunə:</p>
+                <pre>
+                &lt;img src="image.jpg" alt="Şəkil"&gt;
+                </pre>
+                <p>Burada:</p>
+                <ul>
+                    <li><code>src</code> şəklin ünvanını göstərir.</li>
+                    <li><code>alt</code> şəkil yüklənmədikdə görünən mətndir.</li>
+                </ul>
+                <hr>
+                <h2>HTML Faylı Necə Yaradılır?</h2>
+                <ol>
+                    <li>İstənilən mətn redaktoru açın.</li>
+                    <li>Yeni fayl yaradın.</li>
+                    <li>HTML kodlarını yazın.</li>
+                    <li>Faylı .html uzantısı ilə saxlayın.</li>
+                    <li>Faylı brauzerdə açın.</li>
+                </ol>
+                <p>Nümunə:</p>
+                <pre>
+                index.html
+                about.html
+                contact.html
+                </pre>
+                <hr>
+                <h2>HTML-in Üstünlükləri</h2>
+                <p>HTML-in əsas üstünlükləri:</p>
+                <ul>
+                    <li>Öyrənilməsi asandır.</li>
+                    <li>Pulsuzdur.</li>
+                    <li>Bütün brauzerlər tərəfindən dəstəklənir.</li>
+                    <li>CSS və JavaScript ilə birlikdə işləyir.</li>
+                    <li>Müasir veb saytların əsasını təşkil edir.</li>
+                </ul>
+                <hr>
+
+                <h2>HTML, CSS və JavaScript Arasındakı Fərq</h2>
+
+                <p>
+                Veb inkişafında adətən bu üç texnologiya birlikdə istifadə olunur.
+                </p>
+
+                <table border="1">
+                    <tr>
+                        <th>Texnologiya</th>
+                        <th>Vəzifəsi</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Struktur yaradır</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Dizayn və görünüş yaradır</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>İnteraktivlik əlavə edir</td>
+                    </tr>
+                </table>
+                <p>Məsələn:</p>
+                <ul>
+                    <li>HTML evin skeletidir.</li>
+                    <li>CSS evin rənglənməsi və dekorasiyasıdır.</li>
+                    <li>JavaScript isə evdəki elektrik sistemidir.</li>
+                </ul>
+                <hr>
+                <h2>Nəticə</h2>
+                <p>
+                HTML veb inkişafının əsasını təşkil edən işarələmə dilidir. Veb səhifənin strukturu HTML vasitəsilə qurulur, dizayn CSS ilə hazırlanır, funksionallıq isə JavaScript vasitəsilə əlavə edilir. HTML öyrənmək veb proqramlaşdırmaya başlamaq üçün ilk və ən vacib addımdır.
+                </p>      
+            </article>
+        </div>  
+        <aside>
+            <h3 id="asidebasliq">HTML Faydalı Linklər</h3><br>
+            <p class="asidetext">>><b>W3Schools HTML</b>— HTML-i asan və sürətli şəkildə öyrənmək üçün W3Schools dərslərindən və interaktiv nümunələrindən faydalana bilərsiniz.</p>
+            <a href="https://www.w3schools.com/htmL/default.asp">W3 School</a><br>
+            <p class="asidetext"><b>>>HTMLBook.ru </b>- HTML və CSS mövzularını sadə izahlar və praktik nümunələrlə öyrənmək üçün HTMLBook.ru saytından istifadə edə bilərsiniz.</p>
+            <a href="https://htmlbook.ru/">htmlbook.ru</a><br>
+            <p class="asidetext">>><b>Mozilla Developer Network (MDN)</b> — HTML, CSS və JavaScript texnologiyalarını rəsmi sənədlər və ətraflı izahlarla öyrənmək üçün MDN-dən yararlana bilərsiniz.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla</a><br>
+            <p class="asidetext">>><b>Codecademy </b>— HTML-i interaktiv tapşırıqlar və praktiki məşqlərlə öyrənərək biliklərinizi addım-addım inkişaf etdirə bilərsiniz.</p>
+            <a href="https://www.codecademy.com/learn/learn-html">Code Academy</a>
+            
+        </aside>       
+    </main>
+</body>
+</html>

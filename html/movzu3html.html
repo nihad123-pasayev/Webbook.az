@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webbookaz/html</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height:100%;
+            margin:0;
+            overflow: hidden;
+        }
+        header{
+            background-color:rgb(92, 92, 227);
+            height:80px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            align-items: flex-start;
+            height: calc(100vh - 80px);
+        }
+        #basliqsetri{
+            font-size:50px;
+            margin:0;
+            color:white;
+            font-weight:bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navlist{
+            list-style-type: none;
+            display:flex;
+            margin:0;
+            padding:0;     
+        }
+        .navelement{
+            font-size:18px;
+            padding:10px;
+            background-color: #D1D5DB;
+            border:2px solid rgb(92, 92, 227);
+            width:108px;
+            font-weight: bold;
+        }
+        .navelement.aktiv {
+            background-color: rgb(92, 92, 227); 
+        }
+        .navelement.aktiv a {
+            color: white; 
+        }
+        li a {
+            text-decoration:none;
+            color:black;
+        }
+        #htmlart1{
+            background-color: #D1D5DB;
+            width:324px;
+            min-height: 100vh;
+            margin-top:0;
+            border:2px solid rgb(92, 92, 227);
+            overflow-y: auto;
+        }
+        #htmllist{
+            list-style-type: none ;
+            padding-left:10px;
+        }
+        .htmlelement{
+            font-size:18px;
+            margin-bottom:5px;
+            padding-top:3px;
+            padding-bottom:3px;
+            cursor:pointer;
+            
+        }
+        .htmlelement:hover{
+            background-color:#a6a6a6;  
+        }
+        .htmlelement.active{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+        #htmlart2{
+            overflow-y: auto;
+        }
+        #saghisse {
+        flex: 1;
+        height: 100%; 
+        overflow-y: auto; 
+        padding: 20px 30px;
+        }
+        aside{
+            width:300px;
+        }
+        table{
+            border-collapse: collapse;
+            border:2px solid black;
+        }
+        table th{
+            background-color: rgb(92, 92, 227);
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p id="basliqsetri">Webbook</p>
+    </header>
+    <nav>
+            <ul id="navlist">
+                <li class="navelement"><a href="/Html dersleri/webbokaz/esas.html">Əsas səhifə</a></li>
+                <li class="navelement aktiv"><a href="/Html dersleri/webbokaz/html/inter.html">HTML</a></li>
+                <li class="navelement"><a href="/Html dersleri/webbokaz/css/intercss.html">CSS</a></li>
+            </ul>
+        </nav>
+    <main>
+        
+        
+        <article id="htmlart1">
+                <nav id="htmlnav">
+                    <ul id="htmllist">
+                        <li class="htmlelement"><a href="/Html dersleri/webbokaz/html/inter.html">HTML Giriş</a></li>
+                        <li class="htmlelement"><a href="movzu2html.html">HTML Sənədinin Struktur Elementləri</a></li>
+                        <li class="htmlelement active"><a href="movzu3html.html">HTML Teqləri ilə Mətnin formatlanması</a></li>
+                    </ul>
+                </nav>
+        </article>
+        
+        
+        <div id="saghisse">
+            <article id="htmlart2">
+               <h1>HTML Teqləri ilə Mətnin Formatlanması</h1>
+
+                <p>
+                HTML-də mətnlərin sadəcə ekrana çıxarılması kifayət etmir. Çox vaxt mətndəki müəyyən sözləri qalın, maili, altıxətli etmək və ya xüsusi qeyd kimi göstərmək lazım gəlir. HTML bu məqsədlə bizə geniş formatlama teqləri təqdim edir. Bu teqlər mətni vizual olaraq dəyişməklə yanaşı, axtarış motorlarına da sözlərin önəmini bildirir.
+                </p>
+
+                <hr>
+
+                <h2>Əsas Formatlama Teqləri və İstifadəsi</h2>
+
+                <h3>Qalın Mətn: &lt;b&gt; və &lt;strong&gt;</h3>
+                <p>
+                Hər iki teq mətni vizual olaraq qalın (bold) formaya salır, lakin aralarında mühüm bir məna fərqi var:
+                </p>
+                <ul>
+                    <li><code>&lt;b&gt;</code> teqi mətni sadəcə vizual olaraq qalınlaşdırır, heç bir xüsusi əhəmiyyət daşımır.</li>
+                    <li><code>&lt;strong&gt;</code> teqi isə brauzerə və Google botlarına həmin sözün <strong>çox vacib və əhəmiyyətli</strong> olduğunu bildirir. Ekran oxuyucular bu sözü daha fərqli tonla tələffüz edir.</li>
+                </ul>
+
+                <h3>Maili Mətn: &lt;i&gt; və &lt;em&gt;</h3>
+                <p>
+                Bu teqlər mətni maili (kursiv / italic) formaya salmaq üçün istifadə olunur:
+                </p>
+                <ul>
+                    <li><code>&lt;i&gt;</code> teqi mətni sadəcə vizual olaraq maili edir (məsələn, texniki terminlər və ya xarici sözlər üçün).</li>
+                    <li><code>&lt;em&gt;</code> teqi isə mətnə <em>vurğu (emphasis)</em> qatır. Sözün cümlə daxilində xüsusilə vurğulandığını ifadə edir.</li>
+                </ul>
+
+                <h3>Mətnin Rənglənməsi (Arxa fon): &lt;mark&gt;</h3>
+                <p>
+                Hər hansı bir sözün və ya cümlənin üzərini sanki markerlə rəngləmiş kimi göstərmək üçün <code>&lt;mark&gt;</code> teqindən istifadə olunur. Standart olaraq arxa fonu sarı rəngdə edir.
+                </p>
+
+                <h3>Kiçik Mətn: &lt;small&gt;</h3>
+                <p>
+                Mətni cari şrift ölçüsündən bir dərəcə daha kiçik göstərmək üçün istifadə edilir. Adətən səhifələrin altındakı müəllif hüquqları, xırda bildirişlər və ya şərtlər bölməsində tətbiq olunur.
+                </p>
+
+                <h3>Üstüxətli və Altıxətli Mətn: &lt;del&gt; və &lt;ins&gt;</h3>
+                <p>
+                Bu teqlər sənəd üzərində edilən dəyişiklikləri göstərmək üçün çox faydalıdır:
+                </p>
+                <ul>
+                    <li><code>&lt;del&gt;</code> (deleted) mətndən silinmiş, ləğv edilmiş hissəni bildirir və üzərindən xətt çəkir.</li>
+                    <li><code>&lt;ins&gt;</code> (inserted) mətnə sonradan əlavə olunmuş hissəni bildirir və altından xətt çəkir.</li>
+                </ul>
+
+                <h3>Aşağı və Yuxarı İndeks: &lt;sub&gt; və &lt;sup&gt;</h3>
+                <p>
+                Riyazi və ya kimyəvi düsturları yazarkən bu teqlər əvəzedilməzdir:
+                </p>
+                <ul>
+                    <li><code>&lt;sub&gt;</code> (subscript) mətni aşağı indeksə salır. Məsələn, suyun formulu: H<sub>2</sub>O</li>
+                    <li><code>&lt;sup&gt;</code> (superscript) mətni yuxarı indeksə (dərəcəyə) qaldırır. Məsələn, riyazi tənlik: X<sup>2</sup> + Y<sup>2</sup></li>
+                </ul>
+
+                <hr>
+
+                <h2>Formatlama Teqlərinin Müqayisə Cədvəli</h2>
+                <p>Hansı teqin mətni necə dəyişdiyini birbaşa aşağıdakı cədvəldən görə bilərsiniz:</p>
+
+                <table>
+                    <tr>
+                        <th>Teq (Tag)</th>
+                        <th>Görünüş Forması</th>
+                        <th>Təsviri və Rolu</th>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;b&gt;</code></td>
+                        <td><b>Qalın Mətn</b></td>
+                        <td>Sadəcə vizual qalınlaşdırma.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;strong&gt;</code></td>
+                        <td><strong>Mühüm Mətn</strong></td>
+                        <td>Semantik olaraq vacib olan qalın mətn.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;i&gt;</code></td>
+                        <td><i>Maili Mətn</i></td>
+                        <td>Sadəcə vizual maili (italic) görünüş.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;em&gt;</code></td>
+                        <td><em>Vurğulanmış Mətn</em></td>
+                        <td>Məna olaraq vurğulanan maili mətn.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;mark&gt;</code></td>
+                        <td><mark>İşarələnmiş Mətn</mark></td>
+                        <td>Arxa fonu rənglənmiş (markerlənmiş) mətn.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;del&gt;</code></td>
+                        <td><del>Silinmiş Mətn</del></td>
+                        <td>Üzərindən xətt çəkilmiş köhnə məzmun.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;ins&gt;</code></td>
+                        <td><ins>Əlavə Edilmiş Mətn</ins></td>
+                        <td>Altından xətt çəkilmiş yeni məzmun.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sub&gt;</code></td>
+                        <td>Aşağı<sub>indeks</sub></td>
+                        <td>Kimyəvi formullar üçün alt simvol.</td>
+                    </tr>
+                    <tr>
+                        <td><code>&lt;sup&gt;</code></td>
+                        <td>Yuxarı<sup>indeks</sup></td>
+                        <td>Riyazi dərəcə və qüvvətlər üçün üst simvol.</td>
+                    </tr>
+                </table>
+
+                <hr>
+
+                <h2>Kod Nümunəsi</h2>
+                <p>Mətn formatlama teqlərinin bir yerdə tətbiq olunma forması:</p>
+
+                <pre>
+                &lt;p&gt;Bu normal bir mətndir.&lt;/p&gt;
+                &lt;p&gt;Bu mağazada qiymətlər &lt;del&gt;50 AZN&lt;/del&gt; yox, cəmi &lt;ins&gt;35 AZN&lt;/ins&gt; oldu!&lt;/p&gt;
+                &lt;p&gt;Kimya dərsində &lt;strong&gt;H&lt;sub&gt;2&lt;/sub&gt;SO&lt;sub&gt;4&lt;/sub&gt;&lt;/strong&gt; formulunu öyrəndik.&lt;/p&gt;
+                &lt;p&gt;Yarışmada &lt;mark&gt;1-ci yeri&lt;/mark&gt; qazanan şəxs mükafatlandırılacaq.&lt;/p&gt;
+                </pre>
+
+                <hr>
+
+                <h2>Nəticə</h2>
+                <p>
+                Mətn formatlama teqləri veb səhifədəki oxunurluğu artırır və istifadəçinin diqqətini vacib məqamlara yönəldir. Kod yazarkən təkcə vizual görünüşə (<code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>) yox, həm də axtarış motorlarının optimizasiyası (SEO) üçün semantik teqlərə (<code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>) üstünlük vermək lazımdır.
+                </p>
+            </article>
+        </div>  
+        <aside>
+            <h3 id="asidebasliq">HTML Faydalı Linklər</h3><br>
+            <p class="asidetext">>><b>W3Schools HTML</b>— HTML-i asan və sürətli şəkildə öyrənmək üçün W3Schools dərslərindən və interaktiv nümunələrindən faydalana bilərsiniz.</p>
+            <a href="https://www.w3schools.com/htmL/default.asp">W3 School</a><br>
+            <p class="asidetext"><b>>>HTMLBook.ru </b>- HTML və CSS mövzularını sadə izahlar və praktik nümunələrlə öyrənmək üçün HTMLBook.ru saytından istifadə edə bilərsiniz.</p>
+            <a href="https://htmlbook.ru/">htmlbook.ru</a><br>
+            <p class="asidetext">>><b>Mozilla Developer Network (MDN)</b> — HTML, CSS və JavaScript texnologiyalarını rəsmi sənədlər və ətraflı izahlarla öyrənmək üçün MDN-dən yararlana bilərsiniz.</p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla</a><br>
+            <p class="asidetext">>><b>Codecademy </b>— HTML-i interaktiv tapşırıqlar və praktiki məşqlərlə öyrənərək biliklərinizi addım-addım inkişaf etdirə bilərsiniz.</p>
+            <a href="https://www.codecademy.com/learn/learn-html">Code Academy</a>
+            
+        </aside>       
+    </main>
+</body>
+</html>

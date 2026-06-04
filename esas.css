@@ -1,0 +1,134 @@
+*{
+            box-sizing: border-box;
+        }
+        body{
+            margin:0;
+            padding:0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        header{
+            background-color: rgb(92, 92, 227);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #basliqsetri{
+            font-size: 50px;
+            margin: 0;
+            color: white;
+            font-weight: bold;
+        }
+        #navlist{
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;     
+            background-color: #D1D5DB;
+            border-bottom: 2px solid rgb(92, 92, 227);
+        }
+        .navelement{
+            font-size: 18px;
+            padding: 12px 25px;
+            text-align: center;
+        }
+        .navelement.aktiv {
+            background-color: rgb(92, 92, 227); 
+        }
+        .navelement.aktiv a {
+            color: white; 
+        }
+        li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .hero-section {
+            background-color: #282a35;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero-section h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+        .hero-section p {
+            font-size: 20px;
+            color: #ffc0c7;
+            margin-bottom: 30px;
+        }
+        .section-block {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        
+        .html-block {
+            background-color: #D9EEE1; 
+            color: #282a35;
+        }
+       
+        .css-block {
+            background-color: #FFF4A3;
+            color: #282a35;
+        }
+
+        .section-block h2 {
+            font-size: 40px;
+            margin-top: 0;
+        }
+        .section-block p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        
+       
+        .course-btn {
+            display: inline-block;
+            background-color: #282a35;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            
+        }
+        .course-btn:hover {
+            background-color: black;
+        }
+
+        .code-window {
+            max-width: 600px;
+            margin: 30px auto 0 auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+            overflow: hidden;
+        }
+        .code-header {
+            background-color: #e7e9eb;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .code-body {
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin: 0;
+            font-family: 'Consolas', monospace;
+            font-size: 15px;
+        }
+
+        footer {
+            background-color: #282a35;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
